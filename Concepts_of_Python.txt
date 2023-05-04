@@ -1,0 +1,65 @@
+1-	Discuss examples regarding expressivity.
+Python is an expressive language. Expressive in this context means that a single line of Python code can do more than a single line of code in most other languages. The advantages of a more expressive language are obvious – the fewer lines of code you write, the faster you can complete the project.
+For example (Floating Expressions) are the kind of expressions that produce floating point numbers because of all computations and type conversions. We know that the (/) operator is used to make division, but it also produces floating-point numbers, and as we know the (<, >) operator used to compare put when using (<<, >>) makes Bitwise Expressions (12 >> 2 = 3).
+2-	Discuss examples regarding the lack of orthogonality.
+Python offers multiple ways to accomplish the same task, but some of these ways are not orthogonal. For example, the "append()" method can be used to add an item to a list, but the "+" operator can also be used to concatenate two lists. However, if you try to use the "+" operator with a single item, it will raise a Type Error.
+3-	Discuss issues of syntax design which affect readability and/or writability.
+Python uses indentation to define the scope of blocks, such as if/else statements, loops, and functions. it can also confuse reading the code if the indentation is inconsistent. Additionally, if the indentation is too deep, it can make the code harder to read and modify.
+4-    Discuss exception handling.
+Exception handling is the ability of a program to intercept runtime errors, take corrective actions, and then continue according to the program specifications. A language supporting exception handing is reliable if the programmer effectively utilizes this feature.
+There are many different types of exceptions, and they are all raised in particular situations. Some of the exceptions that you will most likely see as you work on your projects are:
+   IndexError - raised when you try to index a list, tuple, or string beyond the permitted boundaries. 
+   NameError - raised when a name that you are referencing in the code doesn't exist.
+   TypeError - raised when an operation or function is applied to an object of an inappropriate type.
+   ZeroDivisionError - raised when you try to divide by zero.
+Why is this helpful for me? Readability: The ease with which programs of a language can be read and understood
+By handling exceptions, you can provide an alternative flow of execution to avoid crashing your program unexpectedly.
+Basically, when we handle an exception, we are telling the program what to do if the exception is raised. In that case, the "alternative" flow of execution will come to the rescue. If no exceptions are raised, the code will run as expected.
+6-     Discuss named-constants.
+A named constant is a variable that is assigned a constant value only once before run time and remains unchanged during every execution of the program
+-constants protect you from accidentally changing their values somewhere in the code, Constants also help you make your code more readable which programs of a language can be read and understood and maintainable which is The ease of correcting, modifying, and enhancing existing programs. 
+-In Python, constants are usually declared and assigned in a module (a new file containing variables, functions, etc which is imported to the main file).
+ declare constants in separate file and use it in the main file,
+Create a constant.py:
+   # declare constants 
+   PI = 3.14                GRAVITY = 9.8
+Create a main.py:
+  # import constant file we created above
+  import constant
+  print(constant.PI) # prints 3.14
+  print(constant.GRAVITY) # prints 9.8
+In the above example, we created the constant.py module file. Then, we assigned the constant value to PI and GRAVITY.
+After that, we create the main.py file and import the constant module. Finally, we printed the constant value.
+-Named constants improve readability and also parametrize programs, so that it is possible to change the constant value at only one place inside the program instead of changing it from every place it is used.
+7-     Discuss type-binding.
+-Type binding refers to the association of a variable with a particular data type in Python. Python is dynamically typed, which means that the data type of a variable can change at runtime.
+For example, the following code :
+x = 5          print(type(x)) # Output: <class 'int'>.
+x = 3.14       print(type(x)) # Output: <class 'float'>.
+x = 'hello'    print(type(x)) # Output: <class 'str'>.
+In this code, the variable `x` is bound to an integer, a float, and a string at different points in the code.
+-Type binding can also be implicit, such as in the following example:
+x = 5                     y = 3.14
+sum = x + y
+print(type(sum)) # Output: <class 'float'>
+Here, the sum of an integer and a float results in a float. The variable `sum` is implicitly bound to the float data type.
+8-    Discuss storage-binding.
+Storage binding refers to the association of a variable with a memory location in Python. In Python, variables are simply names that refer to values stored in memory. The variable name is bound to a memory location, which holds the value assigned to the variable.
+For example, consider the following code:
+x = 5                       y = x
+print(y)
+Here, the variable `x` is assigned the value `5`, and the variable `y` is then assigned the value of `x`. This creates two variables which are bound to the same memory location, so when we print the value of `y`, it will be `5`.
+Another example:
+x = [1, 2, 3]               y = x
+x.append(4)
+print(y)
+Here, the `x` variable is assigned a list object `[1, 2, 3]`. The variable `y` is then assigned to the same list object that `x` refers to. When we append the value `4` to the list object, both `x` and `y` are referring to the same list object, so when we print the value of `y`, it will be `[1, 2, 3, 4]`.
+9-     Discuss type-checking.
+Type-checking in Python refers to the process of verifying the data type of a variable or expression. It is an important aspect of programming as it helps to prevent errors and ensure that the program runs smoothly. Python provides several built-in functions for type-checking, which are discussed below with examples.
+10-    Discuss side-effects.
+In Python, side-effects refer to any changes that occur outside of a function's scope as a result of the function's execution. These changes can be intentional or unintentional and can have both positive and negative effects on the program's behavior.
+Some common examples of side-effects in Python include:
+1. Modifying global variables: If a function modifies a global variable, it can have unintended consequences on other parts of the program that rely on that variable.
+2. Printing to the console: While printing to the console can be useful for debugging purposes, it can also clutter up the output and make it harder to read.
+3. Writing to files or databases: If a function writes data to a file or database, it can overwrite existing data or cause conflicts with other parts of the program that are accessing the same resource.
+To minimize side-effects in Python, it is best practice to write functions that are self-contained and do not rely on external state. This can be achieved by using functional programming techniques such as immutability and pure functions. Additionally, using context managers and error handling techniques can help prevent unintended consequences from occurring.
