@@ -12,6 +12,7 @@ Choose a language from the following languages:
 * Rust  
 -------------
 The encoding method:
+
 ##################################
 ##################################
 -------------
