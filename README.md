@@ -14,7 +14,7 @@ Choose a language from the following languages:
 The encoding method:
 
 ##################################
-##################################
+
 -------------
 - Answer the following questions and items applied to the language you have chosen from the above list.
 - You must choose examples which are different from the lecture examples.
